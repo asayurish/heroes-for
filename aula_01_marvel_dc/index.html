@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC ou Marvel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="heroes">
+        <div class="batman"></div>
+        <div class="superman"></div>
+        <div class="thor"></div>
+        <div class="demolisher"></div>
+    </div>
+    <script>
+        var universe = window.prompt("Qual é o melhor universo que deseja escolher? Escolha entre DC e Marvel.").trim().toLowerCase();
+        if (universe === 'dc') {
+            var hero = window.prompt("Digite o nome do herói:").trim().toLowerCase();
+            document.write("O herói é: " + hero)
+            if (hero === 'batman') {
+                var batmanDiv = document.querySelector('.batman');
+                batmanDiv.setAttribute('style', 'display: block');
+            } else if (hero === 'superman') {
+                var supermanDiv = document.querySelector('.superman');
+                supermanDiv.setAttribute('style', 'display: block');
+            } else {
+                document.write("O herói digitado não é deste universo...");
+            }
+        } else if (universe === 'marvel') {
+            var hero = window.prompt("Digite o nome do herói:").trim().toLowerCase();
+            document.write("O herói é: " + hero)
+            if (hero === 'thor') {
+                var thorDiv = document.querySelector('.thor');
+                thorDiv.setAttribute('style', 'display: block');
+            } else if (hero === 'demolidor') {
+                var demolisherDiv = document.querySelector('.demolisher');
+                demolisherDiv.setAttribute('style', 'display: block');
+                /**
+                 * Quando pego document.querySelector, ele pega uma das divs que armazenou o nome do heroi, 
+                 * mas ele sozinho não sabe, então pode se usar id, class ou elemento. Aí vai trazer a div 
+                 * no javascript; ele trazendo a div, dá para fazer modificações. Esse de cima eu atribuo novo 
+                 * atributo, usei esse porque todas as divs começam como display none, que é quando falo pro 
+                 * elemento que ela não é nada e não vai aparecer na tela, aí na classe foi definido os background 
+                 * de cada div. quando começa, não faz sentido apareceer todas as imagens, é para isso que serve 
+                 * o display none, depois é atribuido um display block, que tem que aparecer a qualquer custo. ele só 
+                 * aparece quando o usuario digita as informações solicitadas. função q vou passar elemento da div que 
+                 * procuro no body dentro da pagina
+                */
+            } else {
+                document.write("O herói digitado não é deste universo...");
+            }
+        } else {
+            document.write("Universo desconhecido...");
+        }
+    </script>
+</body>
+</html>

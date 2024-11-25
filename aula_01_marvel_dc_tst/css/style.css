@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #f8f9e4;
+}
+
+body {
+    font-family: 'Times New Roman', Courier, monospace;
+    text-align: center;
+    margin: auto;
+}
+
+div {
+    background-position: center;
+    background-size: contain;
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    margin: 0 auto;
+    animation: 1s spinning infinite;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.hulk {
+    background: url('../imgs/hulk.jpg') no-repeat;
+}
+
+.thor {
+    background: url('../imgs/thor.jpg') no-repeat;
+}
+
+.batman {
+    background: url('../imgs/batman.jpg') no-repeat;
+}
+
+.superman {
+    background: url('../imgs/superman.jpg') no-repeat;
+}

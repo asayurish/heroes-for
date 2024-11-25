@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.batman, .superman, .thor, .demolisher {
+    width: 500px;
+    height: 500px;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.batman {
+    background: url('../imgs/batmanmishukishake.jpg');
+}
+
+.superman {
+    background: url('../imgs/pompom.jpg');
+}
+
+.thor {
+    background: url('../imgs/wlpp.jpg');
+}
+
+.demolisher {
+    background: url('../imgs/pompom.jpg');
+}

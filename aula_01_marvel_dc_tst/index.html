@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC ou Marvel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script>
+        var universe = window.prompt("Qual é o universo que você deseja escolher? Escolha entre DC e Marvel.").trim().toLocaleLowerCase();
+        var hero = window.prompt("Digite o herói do universo escolhido.").trim().toLocaleLowerCase();
+        var qtd_hero = Number(window.prompt("Digite a quantidade de vezes que o herói deve aparecer").trim());
+        if (universe == 'dc' || universe == 'marvel') {
+            var dcHeroes = hero == 'batman' || hero == 'superman';
+            var marvelHeroes = hero == 'hulk' || hero == 'thor';
+            if ((universe == 'dc' && dcHeroes) || (universe == 'marvel' && marvelHeroes)) {
+                document.write('O herói escolhido é: ' + hero);
+                for (var i = 0; i < qtd_hero; i++) {
+                    document.write("<div class='" + hero + "'></div>")
+                }
+            } else {
+                document.write('Você digitou um herói inválido.')
+            }
+        } else {
+            document.write('Você digitou um universo inválido.');
+        }
+    </script>
+</body>
+
+</html>
